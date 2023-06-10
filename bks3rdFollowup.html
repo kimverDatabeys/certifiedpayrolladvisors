@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	
     <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
-
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-DiS5fOTLtwZwfp5HJmFW4b/vbUGM6+GGD0r5GxiFZQhG0gC8I6TXg88HoVl8X2rC" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +36,13 @@ body {
 div[style*="margin: 16px 0"] {
     margin: 0 !important;
 }
-
+.left-image {
+    float: left;
+    width: 127px;
+    padding: 13px;
+    position: relative;
+    top: -20px;
+}
 /* What it does: Stops Outlook from adding extra spacing to tables. */
 table,
 td {
@@ -135,8 +143,11 @@ img.g-img + div {
 .bg_dark{
 	background: rgba(0,0,0,.8);
 }
+.blue_dark{
+	background: rgb(72 148 206);
+}
 .email-section{
-	padding:2.5em;
+	padding:20px;;
 }
 
 /*BUTTON*/
@@ -366,10 +377,29 @@ table{
 	}
 
 }
-
+.email-section p {
+	font-size: 18px;
+}
+.footer-icons {
+	text-align: center;
+}
+.footer-icons img {
+    background: #fff;
+    width: 29px;
+    padding: 4px;
+    margin: 0px 2px;
+}
+a.btn.btn-second {
+    background: #da403a;
+    border-radius: 30px;
+    color: #ffffff;
+    padding: 20px 20px;
+    position: relative;
+    top: 9px;
+}
 </style>
 
-
+<script src="https://kit.fontawesome.com/5a2108baac.js" crossorigin="anonymous"></script>
 </head>
 
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
@@ -377,7 +407,7 @@ table{
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
       &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
     	<!-- BEGIN BODY -->
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
       	<tr>
@@ -392,17 +422,19 @@ table{
 		            <td class="bg_dark email-section" style="text-align:center;">
 		            	<div class="heading-section heading-section-white">
 		            		<span class="subheading">Welcome</span>
-		              	<h2>Friendly Reminder: Bookkeeping Services Meeting - Last Chance! </h2>
-		              	<p>I hope this email finds you well. We wanted to send you a friendly reminder about our upcoming meeting to discuss how our bookkeeping services can benefit your business. This is our final attempt to ensure you haven't missed out on this valuable opportunity. </p>
+		              	<h2>Friendly Reminder: Bookkeeping Services Meeting - Last Chance!</h2>
 		            	</div>
 		            </td>
 		          </tr><!-- end: tr -->
 		          <tr>
+					<img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/3rd-Followup-Image.jpg" width="100%" style="margin-bottom: -10px;">
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0 30px;color:#000;">
-		              	<p>We understand that running a business can be overwhelming, and sometimes, things slip through the cracks. However, we genuinely believe that our bookkeeping services can make a significant difference in streamlining your financial operations and freeing up your time to focus on what you do best. </p>
-                    <p>We highly value your perspective and would love the opportunity to explore how we can tailor our services to meet your unique needs. We have prepared valuable insights and strategies specifically for your business and are eager to share them with you. </p>
-					<p>If you have any concerns or need to reschedule the meeting, please don't hesitate to reach out to us. We are more than happy to accommodate any changes that work better for you. </p>
+						<p>Hi [Customer's Name],</p>
+						<p>I hope this email finds you well. We wanted to send you a friendly reminder about our upcoming meeting to discuss how our bookkeeping services can benefit your business. This is our final attempt to ensure you haven't missed out on this valuable opportunity.</p>
+		              	<p>We understand that running a business can be overwhelming, and sometimes, things slip through the cracks. However, we genuinely believe that our bookkeeping services can make a significant difference in streamlining your financial operations and freeing up your time to focus on what you do best.</p>
+                    <p>We highly value your perspective and would love the opportunity to explore how we can tailor our services to meet your unique needs. We have prepared valuable insights and strategies specifically for your business and are eager to share them with you.</p>
+					<p>If you have any concerns or need to reschedule the meeting, please don't hesitate to reach out to us. We are more than happy to accommodate any changes that work better for you.</p>
 		            	</div>
 		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 		            		<tr>
@@ -410,54 +442,31 @@ table{
 		            	</table>
 		            </td>
 		          </tr><!-- end: tr -->
-		          <tr>
-		            <td class="bg_light email-section" style="text-align:center;color:#000;">
-		            	<table>
-		            		<tr>
-		            		</tr>
-		            		<tr>
-		            			<td style="padding-top: 20px;">
-                        <img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/calendar-days-regular.svg" width="80px">
-		            				<h2>Follow-up Meeting</h2>
-                        <p><a href="#" class="btn btn-primary">Select your Date preferred date and time</a></p>
-		            			</td>
-		            		</tr>
-		            	</table>
-		            </td>
-		          </tr><!-- end: tr -->
-		          <tr>
-		            <td class="bg_white email-section">
-		            	<div class="heading-section" style="text-align: left; padding: 0 30px;color:#000;">
-		              	<p>We genuinely hope that you can attend this meeting and experience firsthand the transformative potential of our bookkeeping services. Your success is our top priority, and we are here to support you every step of the way. </p>
-						  <p>To confirm your attendance or provide any updates, please reply to this email or contact us at <a href="tel:7727710711">772-771-0711</a>. We kindly request your response within the next 48 hours to ensure we can adequately prepare for our discussion. </p>
-						  <p>Thank you for considering Certified Payroll Advisors as your trusted bookkeeping services provider. We value your time and look forward to connecting with you soon! </p>
+				  <tr>
+		            <td class="blue_dark email-section" style="text-align:center;background-image:url(https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/Hero_Interior.jpg);background-position: center center; background-repeat: no-repeat; background-size: cover;">
+		            	<div class="heading-section heading-section-white" style="padding: 32px 0px;">
+		            		<span class="subheading"></span>
+							<img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/calendar-days-regular.svg" width="80px">
+		              	<h2>Follow-up Meeting</h2>
+						  <p><a href="#" class="btn btn-second">Select your preferred date and time</a></p>
 		            	</div>
 		            </td>
 		          </tr><!-- end: tr -->
-		          <tr>
-			          <td valign="middle" class="counter" style="background-image: url(https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/NaviPayPayrollServices-1153235950.jpg); background-size: cover; padding: 6em 0;">
-			            <table>
-			            	<tr>
-			            		<td valign="middle" width="25%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="counter-text">
-                            	<span class="num"></span>
-                            	<span class="name" style="color:#000;">&nbsp;</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-			            	</tr>
-			            </table>
-			          </td>
-				      </tr><!-- end tr -->   
-		        </table>
-
-		      </td>
-		    </tr><!-- end:tr -->
+				  <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: left; padding: 0 30px;color:#000;">
+						<p>We genuinely hope that you can attend this meeting and experience firsthand the transformative potential of our bookkeeping services. Your success is our top priority, and we are here to support you every step of the way.</p>
+						<p>To confirm your attendance or provide any updates, please reply to this email or contact us at 772-771-0711. We kindly request your response within the next 48 hours to ensure we can adequately prepare for our discussion.</p>
+		              	<p>Thank you for considering Certified Payroll Advisors as your trusted bookkeeping services provider. We value your time and look forward to connecting with you soon!</p>
+						  <p>Warm regards, <br>
+							[Client Name]<br>
+							Certified Payroll Advisors <br>
+		            	</div>
+					</td>
+                    </tr>
       <!-- 1 Column Text + Button : END -->
       </table>
+	  <img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/NaviPayPayrollServices-1153235950-e1686293059354.jpg" width="100%" style="margin-bottom: -10px;">
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
       	<tr>
           <td valign="middle" class="bg_black footer email-section">
@@ -472,6 +481,15 @@ table{
                         <p style="line-height: 10px;">Phone: <a href="tel:7727710711">772-771-0711</a> </p>
                         <p style="line-height: 10px;">Fax: 772-607-6665 </p>
                       </td>
+					  <tr>
+						<td>
+							<div class="footer-icons">
+								<a href="https://www.facebook.com/certifiedpayrolladvisors" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/facebook.svg" alt="" srcset=""></a> <a href="https://twitter.com/PayrollAdvisors" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/twitter.svg" alt=""></a>
+								<a href="https://www.instagram.com/certifiedpayrolladvisors/" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/instagram.svg" alt="" style="width: 26px;"></a>
+								<a href="https://www.linkedin.com/company/certified-payroll-services/?viewAsMember=true" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/linkedin.svg" alt="" style="width: 26px;"></a>
+							</div>
+					</td>
+					  </tr>
                     </tr>
                   </table>
                 </td>
