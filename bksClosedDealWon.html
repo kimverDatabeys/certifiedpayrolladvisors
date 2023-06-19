@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"> 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
     <meta charset="utf-8"> <!-- utf-8 works for most cases -->
     <meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
     <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	
     <title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-DiS5fOTLtwZwfp5HJmFW4b/vbUGM6+GGD0r5GxiFZQhG0gC8I6TXg88HoVl8X2rC" crossorigin="anonymous">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +36,13 @@ body {
 div[style*="margin: 16px 0"] {
     margin: 0 !important;
 }
-
+.left-image {
+    float: left;
+    width: 127px;
+    padding: 13px;
+    position: relative;
+    top: -20px;
+}
 /* What it does: Stops Outlook from adding extra spacing to tables. */
 table,
 td {
@@ -128,14 +137,17 @@ img.g-img + div {
 .bg_light{
 	background: #fafafa;
 }
-.bg_black{
-	background: #000000;
+.bg_black {
+    background: #333;
 }
 .bg_dark{
 	background: rgba(0,0,0,.8);
 }
+.blue_dark{
+	background: rgb(72 148 206);
+}
 .email-section{
-	padding:2.5em;
+	padding:20px;;
 }
 
 /*BUTTON*/
@@ -147,8 +159,6 @@ img.g-img + div {
   background: #4894ce;
   color: #ffffff;
   padding: 20px 20px;
-  position: relative;
-  top: 9px
 }
 
 
@@ -352,6 +362,18 @@ table{
 }
 
 
+.footer-data p, .footer-data a {
+	color:#fff!important;
+}
+.footer-data {
+	display: flex; 
+	flex-direction: row; 
+	flex-wrap: nowrap; 
+	align-content: center; 
+	justify-content: space-around; 
+	align-items: center;
+	margin: 38px 0px;
+}
 @media screen and (max-width: 500px) {
 
 	.icon{
@@ -363,10 +385,25 @@ table{
 		padding-right: 20px;
 		text-align: left;
 	}
+	.footer-data {
+		display: block;
+	}
 
 }
-
+.email-section p {
+	font-size: 18px;
+}
+.footer-icons {
+	text-align: center;
+}
+.footer-icons img {
+    width: 29px;
+    padding: 4px;
+    margin: 0px 2px;
+}
 </style>
+
+<script src="https://kit.fontawesome.com/5a2108baac.js" crossorigin="anonymous"></script>
 </head>
 
 <body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;">
@@ -374,7 +411,7 @@ table{
     <div style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
       &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
     </div>
-    <div style="max-width: 600px; margin: 0 auto;" class="email-container">
+    <div style="max-width: 800px; margin: 0 auto;" class="email-container">
     	<!-- BEGIN BODY -->
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
       	<tr>
@@ -390,23 +427,17 @@ table{
 		            	<div class="heading-section heading-section-white">
 		            		<span class="subheading">Welcome</span>
 		              	<h2>🎉 Congratulations on Choosing Certified Payroll Advisors for Your Bookkeeping Needs!</h2>
-		              	<p>We are thrilled to inform you that we have successfully closed the deal to provide bookkeeping services to your esteemed organization. On behalf of the entire team at Certified Payroll Advisors, I would like to express our heartfelt gratitude for choosing us as your trusted partner in managing your financial operations. </p>
-						  <p>We understand the importance of accurate and reliable bookkeeping in driving the success of your business. With our expertise and commitment to excellence, we are confident that we will exceed your expectations and deliver exceptional results.</p>
 		            	</div>
 		            </td>
 		          </tr><!-- end: tr -->
 		          <tr>
+					<img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/Congrats.jpg" style="margin-bottom: -10px;width:100%;">
 		            <td class="bg_white email-section">
 		            	<div class="heading-section" style="text-align: left; padding: 0 30px;color:#000;">
-						<h3>Here's what you can expect from our partnership: </h3>
-
-		              	<p>1. <strong>Dedicated Bookkeeping Team</strong>: Our experienced and knowledgeable team of bookkeepers will work diligently to ensure your financial records are up-to-date, accurate, and compliant. </p>
-                    <p>2. <strong>Timely Reporting</strong>: We will provide you with regular financial reports, giving you valuable insights into the financial health of your business, and enabling you to make informed decisions. </p>
-					<p>3. <strong>Customized Solutions</strong>: We understand that every business is unique, and we will tailor our services to meet your specific needs and requirements. Your success is our priority. </p>
-					<p>4. <strong>Open Communication</strong>: We believe in maintaining open lines of communication to address any questions, concerns, or suggestions you may have. Our team is always here to assist you. </p>
-					<p>We are excited to embark on this journey with you and contribute to the growth and prosperity of your business. We will work tirelessly to ensure that our services add tangible value and make a positive impact on your financial operations. </p>
-					<p>If you have any further questions or if there is anything specific you would like us to focus on, please do not hesitate to reach out to us. We are here to provide ongoing support and assistance whenever you need it.</p>
-					<p>Once again, thank you for entrusting Certified Payroll Advisors with your bookkeeping needs. We are honored to be a part of your business journey and look forward to a long and successful partnership. </p>
+						<p>Hi [Customer's Name],</p>
+						<p>I hope this email finds you well. I recently came across your business and wanted to reach out to explore how our expertise can help streamline your financial operations.</p>
+		              	<p>As a business owner, you understand the critical role that accurate bookkeeping plays in the success of any organization. However, managing financial records and staying compliant with ever-changing regulations can be a daunting task. That's where Certified Payroll Advisors comes in.</p>
+                    <p>We specialize in offering comprehensive bookkeeping services tailored to the unique needs of businesses like yours. Our team of experienced professionals combines technical expertise with the latest accounting software to provide you with accurate, timely, and reliable financial information. </p>
 		            	</div>
 		            	<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
 		            		<tr>
@@ -414,55 +445,83 @@ table{
 		            	</table>
 		            </td>
 		          </tr><!-- end: tr -->
-		          <tr>
-			          <td valign="middle" class="counter" style="background-image: url(https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/NaviPayPayrollServices-1153235950.jpg); background-size: cover; padding: 6em 0;">
-			            <table>
-			            	<tr>
-			            		<td valign="middle" width="25%">
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td class="counter-text">
-                            	<span class="num"></span>
-                            	<span class="name" style="color:#000;">&nbsp;</span>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-			            	</tr>
-			            </table>
-			          </td>
-				      </tr><!-- end tr -->   
-		        </table>
+				  <tr>
+		            <td class="blue_dark email-section" style="text-align:center;">
+		            	<div class="heading-section heading-section-white">
+		            		<span class="subheading"></span>
+		              	<h2>Here are some key benefits of working with Certified Payroll Advisors</h2>
+		            	</div>
+		            </td>
+		          </tr><!-- end: tr -->
+				  <tr>
+		            <td class="bg_white email-section">
+		            	<div class="heading-section" style="text-align: left;color:#000;">
+						<p>
+							<img class="left-image" src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/Dedicated-Bookkeeping-Team.png">
+							<strong>Dedicated Bookkeeping Team</strong>: Our experienced and knowledgeable team of bookkeepers will work diligently to ensure your financial records are up-to-date, accurate, and compliant.
+						</p><br>
+						<p>
+							<img class="left-image" src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/Timely-Reporting.png">
+							<strong>Timely Reporting</strong>: We will provide you with regular financial reports, giving you valuable insights into the financial health of your business, and enabling you to make informed decisions.
+						</p><br>
+						<p>
+							<img class="left-image" src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/Customized-Solutions-1.png">
+							<strong>Customized Solutions</strong>: We understand that every business is unique, and we will tailor our services to meet your specific needs and requirements. Your success is our priority.
+						</p><br>
+						<p>
+							<img class="left-image" src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/Customized-Solutions.png">
+							<strong>Open Communication</strong>: We believe in maintaining open lines of communication to address any questions, concerns, or suggestions you may have. Our team is always here to assist you.  
+						</p><br>
+						<div style="padding: 0px 25px;">
+						<p>We are excited to embark on this journey with you and contribute to the growth and prosperity of your business. We will work tirelessly to ensure that our services add tangible value and make a positive impact on your financial operations.</p>
+                        <p>If you have any further questions or if there is anything specific you would like us to focus on, please do not hesitate to reach out to us. We are here to provide ongoing support and assistance whenever you need it.</p>
+						<p>Once again, thank you for entrusting Certified Payroll Advisors with your bookkeeping needs. We are honored to be a part of your business journey and look forward to a long and successful partnership.</p>
+						</div>
+		            	</div>
 
 		      </td>
 		    </tr><!-- end:tr -->
       <!-- 1 Column Text + Button : END -->
       </table>
+	  <img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/NaviPayPayrollServices-1153235950-e1686293059354.jpg" width="100%" style="margin-bottom: -10px;">
       <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
-      	<tr>
-          <td valign="middle" class="bg_black footer email-section">
-            <table>
-            	<tr>
-                <td valign="top" width="100%" style="padding-top: 20px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                    <tr>
-                      <td style="text-align: left; padding-right: 10px;text-align:center;">
-                      	<a href="https://www.certifiedpayrolladvisors.com/" target="_blank"><h3 class="heading">Certified Payroll Advisors </h3></a>
-                      	<p style="line-height: 10px;">Address: 2479 SE Dixie Hwy Stuart, FL 34996</p>
-                        <p style="line-height: 10px;">Phone: <a href="tel:7727710711">772-771-0711</a> </p>
-                        <p style="line-height: 10px;">Fax: 772-607-66656 </p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr><!-- end: tr -->
+		<tr>
+			<td valign="middle" class="bg_black footer email-section">
+			  <table>
+				  <tr>
+				  <td valign="top" width="100%" style="padding-top: 20px;">
+					<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+					  <tr>
+						<td style="text-align: left; padding-right: 10px;text-align:center;">
+							<a href="https://www.certifiedpayrolladvisors.com/" target="_blank"><h3 class="heading" style="font-size: 25px;">Let's Work Together.</h3></a>
+						  <div class="footer-data" style="color:#fff;">
+							<p>Address:<br> 2479 SE Dixie Hwy Stuart,<br>FL 34996</p>
+						  <p>Phone:<br>772-771-0711</p>
+						  <p>Fax:<br> 772-607-6665 </p>
+						  </div>
+						</td>
+						<tr>
+						  <td>
+							  <div class="footer-icons">
+								  <a href="https://www.facebook.com/certifiedpayrolladvisors" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/fb.png" alt="" srcset=""></a> <a href="https://twitter.com/PayrollAdvisors" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/twitter.png" alt=""></a>
+								  <a href="https://www.instagram.com/certifiedpayrolladvisors/" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/instagram.png" alt=""></a>
+								  <a href="https://www.linkedin.com/company/certified-payroll-services/?viewAsMember=true" target="_blank"><img src="https://www.certifiedpayrolladvisors.com/wp-content/uploads/2023/06/linkedin-1.png" alt="" style="width: 26px;"></a>
+							  </div>
+						  </td>
+						</tr>
+						<tr>
+						  <td><p style="text-align: center;color:#fff;">© 2023 Certified Payroll Advisors. All Rights Reserved. | <a href="https://www.certifiedpayrolladvisors.com/privacy-policy/" style="color: #fff;">Privacy Policy</a></p></td>
+						</tr>
+					  </tr>
+					</table>
+				  </td>
+				</tr>
+			  </table>
+			</td>
+		  </tr><!-- end: tr -->
       </table>
 
     </div>
   </center>
-  <script src="https://kit.fontawesome.com/5a2108baac.js" crossorigin="anonymous"></script>
 </body>
 </html>
