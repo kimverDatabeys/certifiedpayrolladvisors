@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+	xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width"> <!-- Forcing initial-scale shouldn't be necessary -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+	<meta name="x-apple-disable-message-reformatting"> <!-- Disable auto-scale in iOS 10 Mail entirely -->
+
+	<title></title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<!-- CSS Reset : BEGIN -->
+	<style>
+		html,
+		body {
+			margin: 0 auto !important;
+			padding: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+			background: #f1f1f1;
+		}
+
+		/* What it does: Stops email clients resizing small text. */
+		* {
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* What it does: Centers email on Android 4.4 */
+		div[style*="margin: 16px 0"] {
+			margin: 0 !important;
+		}
+
+		.left-image {
+			float: left;
+			width: 127px;
+			padding: 13px;
+			position: relative;
+			top: -20px;
+		}
+
+		/* What it does: Stops Outlook from adding extra spacing to tables. */
+		table,
+		td {
+			mso-table-lspace: 0pt !important;
+			mso-table-rspace: 0pt !important;
+		}
+
+		/* What it does: Fixes webkit padding issue. */
+		table {
+			border-spacing: 0 !important;
+			border-collapse: collapse !important;
+			table-layout: fixed !important;
+			margin: 0 auto !important;
+		}
+
+		/* What it does: Uses a better rendering method when resizing images in IE. */
+		img {
+			-ms-interpolation-mode: bicubic;
+		}
+
+		/* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+		a {
+			text-decoration: none;
+		}
+
+		/* What it does: A work-around for email clients meddling in triggered links. */
+		*[x-apple-data-detectors],
+		/* iOS */
+		.unstyle-auto-detected-links *,
+		.aBn {
+			border-bottom: 0 !important;
+			cursor: default !important;
+			color: inherit !important;
+			text-decoration: none !important;
+			font-size: inherit !important;
+			font-family: inherit !important;
+			font-weight: inherit !important;
+			line-height: inherit !important;
+		}
+
+		/* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+		.a6S {
+			display: none !important;
+			opacity: 0.01 !important;
+		}
+
+		/* What it does: Prevents Gmail from changing the text color in conversation threads. */
+		.im {
+			color: inherit !important;
+		}
+
+		/* If the above doesn't work, add a .g-img class to any image in question. */
+		img.g-img+div {
+			display: none !important;
+		}
+
+		/* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+		/* Create one of these media queries for each additional viewport size you'd like to fix */
+
+		/* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+		@media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+			u~div .email-container {
+				min-width: 320px !important;
+			}
+		}
+
+		/* iPhone 6, 6S, 7, 8, and X */
+		@media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+			u~div .email-container {
+				min-width: 375px !important;
+			}
+		}
+
+		/* iPhone 6+, 7+, and 8+ */
+		@media only screen and (min-device-width: 414px) {
+			u~div .email-container {
+				min-width: 414px !important;
+			}
+		}
+	</style>
+
+	<!-- CSS Reset : END -->
+
+	<!-- Progressive Enhancements : BEGIN -->
+	<style>
+		.primary {
+			background: #4894ce;
+		}
+
+		.bg_white {
+			background: #ffffff;
+		}
+
+		.bg_light {
+			background: #fafafa;
+		}
+
+		.bg_black {
+			background: #333;
+		}
+
+		.bg_dark {
+			background: rgba(0, 0, 0, .8);
+		}
+
+		.blue_dark {
+			background: rgb(72 148 206);
+		}
+
+		.email-section {
+			padding: 20px;
+			;
+		}
+
+		/*BUTTON*/
+		.btn {
+			padding: 10px 15px;
+		}
+
+		.btn.btn-primary {
+			border-radius: 30px;
+			background: #4894ce;
+			color: #ffffff;
+			padding: 20px 20px;
+		}
+
+
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Roboto', sans-serif;
+			color: #000000;
+			margin-top: 0;
+		}
+
+		body {
+			font-family: 'Roboto', sans-serif;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 1.8;
+			color: rgba(0, 0, 0, .4);
+		}
+
+		a {
+			color: #4894ce;
+		}
+
+		table {}
+
+		/*LOGO*/
+
+		.logo h1 {
+			margin: 0;
+		}
+
+		.logo h1 a {
+			color: #000;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		/*HERO*/
+		.hero {
+			position: relative;
+		}
+
+
+
+		.hero .text {
+			color: rgba(255, 255, 255, .8);
+		}
+
+		.hero .text h2 {
+			color: #ffffff;
+			font-size: 30px;
+			margin-bottom: 0;
+		}
+
+
+		/*HEADING SECTION*/
+
+
+		.heading-section h2 {
+			color: #000000;
+			font-size: 28px;
+			margin-top: 0;
+			line-height: 1.4;
+		}
+
+		.heading-section .subheading {
+			margin-bottom: 20px !important;
+			display: inline-block;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: rgba(0, 0, 0, .4);
+			position: relative;
+		}
+
+		.heading-section .subheading::after {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: -10px;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: #da403a;
+			margin: 0 auto;
+		}
+
+		.heading-section-white {
+			color: rgba(255, 255, 255, .8);
+		}
+
+		.heading-section-white h2 {
+			font-size: 28px;
+			line-height: 1;
+			padding-bottom: 0;
+		}
+
+		.heading-section-white h2 {
+			color: #ffffff;
+		}
+
+		.heading-section-white .subheading {
+			margin-bottom: 0;
+			display: inline-block;
+			font-size: 13px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			color: rgba(255, 255, 255, .4);
+		}
+
+
+		.icon {
+			text-align: center;
+		}
+
+
+
+
+		/*SERVICES*/
+		.text-services {
+			padding: 10px 10px 0;
+			text-align: center;
+		}
+
+		.text-services h3 {
+			font-size: 20px;
+		}
+
+		/*BLOG*/
+		.text-services .meta {
+			text-transform: uppercase;
+			font-size: 14px;
+		}
+
+		/*TESTIMONY*/
+		.text-testimony .name {
+			margin: 0;
+		}
+
+		.text-testimony .position {
+			color: rgba(0, 0, 0, .3);
+
+		}
+
+
+		/*VIDEO*/
+		.img {
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+
+		.img .icon {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin-top: -25px;
+		}
+
+		.img .icon a {
+			display: block;
+			width: 60px;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -25px;
+		}
+
+
+
+		/*COUNTER*/
+		.counter-text {
+			text-align: center;
+		}
+
+		.counter-text .num {
+			display: block;
+			color: #ffffff;
+			font-size: 34px;
+			font-weight: 700;
+		}
+
+		.counter-text .name {
+			display: block;
+			color: rgba(255, 255, 255, .9);
+			font-size: 13px;
+		}
+
+
+		/*FOOTER*/
+
+		.footer {
+			color: rgba(255, 255, 255, .5);
+
+		}
+
+		.footer .heading {
+			color: #ffffff;
+			font-size: 20px;
+		}
+
+		.footer ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		.footer ul li {
+			list-style: none;
+			margin-bottom: 10px;
+		}
+
+		.footer ul li a {
+			color: rgba(255, 255, 255, 1);
+		}
+
+		.footer p,
+		.footer a {
+			color: #fff !important;
+		}
+
+		.footer-data {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			align-content: center;
+			justify-content: space-around;
+			align-items: center;
+			margin: 38px 0px;
+		}
+
+		@media screen and (max-width: 500px) {
+
+			.icon {
+				text-align: left;
+			}
+
+			.text-services {
+				padding-left: 0;
+				padding-right: 20px;
+				text-align: left;
+			}
+
+			.footer-data {
+				display: block;
+			}
+
+		}
+
+		.email-section p {
+			font-size: 18px;
+		}
+
+		.footer-icons {
+			text-align: center;
+		}
+
+		.footer-icons img {
+			width: 29px;
+			padding: 4px;
+			margin: 0px 2px;
+		}
+
+		a.btn.btn-second {
+			background: #da403a;
+			border-radius: 30px;
+			color: #ffffff;
+			padding: 20px 20px;
+			position: relative;
+			top: 9px;
+		}
+		.blue-h {
+			display: flex;
+			justify-content: center;
+			padding: 20px;
+			background-color: #4894ce;
+		}
+
+		.blue-h p {
+			color: #fff;
+			font-size: 28px;
+			font-weight: 600;
+			line-height: 1;
+			text-align: center;
+		}
+
+		.heading-section li {
+			font-size: 16px;
+		}
+	</style>
+</head>
+
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly; background-color: #222222;"
+	cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1113.0" data-gr-ext-installed="">
+	<center style="width: 100%; background-color: #f1f1f1;">
+		<div
+			style="display: none; font-size: 1px;max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
+			‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+		</div>
+		<div style="max-width: 800px; margin: 0 auto;" class="email-container">
+			<!-- BEGIN BODY -->
+			<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+				style="margin: auto;">
+				<tbody>
+					<tr>
+						<td class="bg_white logo" style="padding: 1em 2.5em; text-align: center">
+							<img src="./CPA-Logo-Ver-2-copy-web.png" width="300px">
+						</td>
+					</tr><!-- end tr -->
+					<tr>
+						<td class="bg_white">
+							<img src="./Hero_home_web.jpg" width="100%" style="margin-bottom: -10px;">
+							<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+								<tbody>
+									<tr>
+										<td class="bg_dark email-section" style="text-align:center;">
+											<div class="heading-section heading-section-white">
+												<span class="subheading">Welcome</span>
+												<h2>Plan Your Future with Expert Retirement Guidance</h2>
+											</div>
+										</td>
+									</tr><!-- end: tr -->
+									<tr>
+
+										<td class="bg_white email-section">
+											<div class="heading-section"
+												style="text-align: left; padding: 0 30px;color:#000;">
+												<p>Hello [Contact:FirstName], </p>
+												<p>Are you ready to take charge of your financial future? At Certified
+													Payroll Advisors, we specialize in providing expert guidance for
+													retirement planning. From Employer Sponsored 529 Plans to Safe
+													Harbor 401K plans, we offer a wide range of solutions to help you
+													make the right decisions for you, your family, and your business.
+												</p>
+												<p>Retirement planning is not just about securing your future but also
+													plays a crucial role in your exit strategy planning. Our team of
+													Certified Payroll Advisors is dedicated to connecting the dots for
+													you, making sure you have access to the right experts and resources
+													to make informed decisions. Let us guide you through the
+													complexities of retirement planning, ensuring that you run your
+													retirement plans as efficiently as possible. </p>
+												<div class="blue-h">
+													<p>Benefits of choosing Certified Payroll Advisors for your
+														retirement
+														planning needs: </p>
+												</div>
+												<p>
+												<ol>
+													<li><strong>Comprehensive Solutions: </strong>We offer a variety of retirement
+														planning options, including Employer Sponsored 529 Plans, Safe
+														Harbor 401K plans, Individual Retirement Accounts (IRA), and SEP
+														IRA plans. Whatever your needs may be, we have the expertise and
+														resources to help you build a solid retirement plan. </li>
+													<li><strong>Attract and Retain Talent:</strong> By offering attractive retirement
+														plans and investment benefits, you can position your business as
+														an employer of choice. According to recent studies, a retirement
+														plan is considered a "must-have" benefit by most employees. By
+														partnering with us, you can enhance your employee benefits
+														package and attract top talent to your organization. </li>
+													<li><strong>Personalized Guidance:</strong> Our experienced team will work closely
+														with you to understand your unique financial goals and create a
+														retirement plan tailored to your needs. We pride ourselves on
+														providing personalized guidance and support throughout the
+														planning process. </li>
+												</ol>
+												</p>
+											</div>
+											<table role="presentation" border="0" cellpadding="0" cellspacing="0"
+												width="100%">
+												<tbody>
+													<tr>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr><!-- end: tr -->
+									<tr>
+										<td class="blue_dark email-section"
+											style="text-align:center;background-image:url(https://www.certifiedpayrolladvisors.com/wp-content/uploads/2020/10/Hero_Interior.jpg);background-position: center center; background-repeat: no-repeat; background-size: cover;">
+											<div class="heading-section heading-section-white"
+												style="    padding: 32px 0px;">
+												<span class="subheading"></span>
+												<img src="./calendar-days-regular.svg" width="80px">
+												<h2>Follow-up Meeting</h2>
+												<p><a href="/" class="btn btn-second">Select your preferred date and
+														time</a>
+												</p>
+											</div>
+										</td>
+									</tr><!-- end: tr -->
+									<tr>
+										<td class="bg_white email-section">
+											<div class="heading-section"
+												style="text-align: left; padding: 0 30px;color:#000;">
+												<p>Remember, taking care of your insurance needs is crucial for the
+													success and stability of your business. We want to ensure that you
+													have the right coverage in place to mitigate any risks that may
+													arise. </p>
+												<p>Please don't hesitate to reach out if you have any questions or need
+													further assistance. We're here to support you! </p>
+												<p>
+													Warm regards, <br>
+													Certified Payroll Advisors <br>
+												</p>
+											</div>
+										</td>
+									</tr>
+									<!-- 1 Column Text + Button : END -->
+								</tbody>
+							</table>
+							<img src="./Testimonials-2.png" width="100%" style="margin-bottom: -9px;">
+							<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0"
+								width="100%" style="margin: auto;">
+								<tbody>
+									<tr>
+										<td valign="middle" class="bg_black footer email-section">
+											<table>
+												<tbody>
+													<tr>
+														<td valign="top" width="100%" style="padding-top: 20px;">
+															<table role="presentation" cellspacing="0" cellpadding="0"
+																border="0" width="100%">
+																<tbody>
+																	<tr>
+																		<td
+																			style="text-align: left; padding-right: 10px;text-align:center;">
+																			<a href="https://www.certifiedpayrolladvisors.com/"
+																				target="_blank">
+																				<h3 class="heading"
+																					style="font-size: 25px;">Let's Work
+																					Together.</h3>
+																			</a>
+																			<div class="footer-data">
+																				<p>Address:<br> 2479 SE Dixie Hwy
+																					Stuart,<br>FL 34996</p>
+																				<p>Phone:<br><a
+																						href="tel:7727710711">772-771-0711</a>
+																				</p>
+																				<p>Fax:<br> 772-607-6665 </p>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<div class="footer-icons">
+																				<a href="https://www.facebook.com/certifiedpayrolladvisors"
+																					target="_blank"><img src="./fb.png"
+																						alt="" srcset=""></a> <a
+																					href="https://twitter.com/PayrollAdvisors"
+																					target="_blank"><img
+																						src="./twitter.png" alt=""></a>
+																				<a href="https://www.instagram.com/certifiedpayrolladvisors/"
+																					target="_blank"><img
+																						src="./instagram.png"
+																						alt=""></a>
+																				<a href="https://www.linkedin.com/company/certified-payroll-services/?viewAsMember=true"
+																					target="_blank"><img
+																						src="./linkedin-1.png" alt=""
+																						style="width: 26px;"></a>
+																			</div>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td>
+																			<p style="text-align: center;">© 2023
+																				Certified Payroll Advisors. All Rights
+																				Reserved. | <a
+																					href="https://www.certifiedpayrolladvisors.com/privacy-policy/">Privacy
+																					Policy</a></p>
+																		</td>
+																	</tr>
+
+																</tbody>
+															</table>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr><!-- end: tr -->
+								</tbody>
+							</table>
+
+
+
+
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</center>
+</body>
+
+</html>
